@@ -1,0 +1,65 @@
+<html>
+<title>ITI Invoice browser</title>
+<script>
+</script>
+<body>
+<center><u>You request invoice id</u> : <TMPL_VAR NAME=f_invid> </center>
+<table width=100%>
+    <tr>
+        <td width=10%>
+        Customer name
+        </td>
+        <td width=20%>
+            <TMPL_VAR NAME=f_custname>
+        </td>
+    </tr>
+
+        <tr>
+        <td width=10%>
+        Invoice Total
+        </td>
+        <td width=20%>
+            <TMPL_VAR NAME=f_invtotal>
+        </td>
+        
+    </tr>
+
+</table>
+  <table width=100% border=1>
+    <tr>
+      <td width=25%>
+        Item ID
+      </td>
+      <td width=25%>
+        Item name
+      </td>
+      <td width=25%>
+        Unit price
+      </td>
+
+      <td width=25%>
+        Quantity sold
+      </td>
+    </tr>
+
+<TMPL_LOOP NAME=INV_DETINFO>
+    <tr>
+      <td width=25%>
+         <TMPL_VAR NAME=ITEMID>
+      </td>
+      <td width=25%>
+         <TMPL_VAR NAME=ITEMUP>
+      </td>
+
+      <td width=25%>
+         <TMPL_VAR NAME=NAME>
+      </td>
+      <td width=25%>
+         <TMPL_VAR NAME=ITEMQU>
+      </td>
+    </tr>
+</TMPL_LOOP>
+
+  </table>
+</body>
+</html>
